@@ -20,7 +20,7 @@
 // Função para manipular tamanho de fonte //
 function changeFontSize(action) {
     // Alvo de alteração: títulos e inputs
-    const elements = document.querySelectorAll('.titulo, .subtitulo, input, .titulo-explore, .subtitulo-explore');
+    const elements = document.querySelectorAll('.titulo, .subtitulo, input, .titulo-explore, .subtitulo-explore, .input-group, .form-select, .subtitulo-exp, .conteudo-filtro');
     elements.forEach((element) => {
         let currentSize = parseFloat(window.getComputedStyle(element).fontSize);
         if (action === 'increase') {
