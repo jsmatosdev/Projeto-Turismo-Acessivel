@@ -180,3 +180,14 @@ body {
 .btn-pesquisa:hover {
     background: #126455;
 }
+
+.eclipse {
+    background-color: rgb(230, 230, 230);
+    border-radius: 50%;
+    width: 100px !important;
+    height: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
