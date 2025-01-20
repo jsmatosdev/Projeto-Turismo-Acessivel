@@ -74,4 +74,3 @@ carousel.addEventListener('mouseleave', () => {
     endX = 0;
 });
 
-

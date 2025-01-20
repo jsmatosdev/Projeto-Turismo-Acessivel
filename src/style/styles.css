@@ -8,7 +8,7 @@
 
 body {
     background: #BF815E;
-    font-family: 'POPPINS';
+    font-family: 'popins';
 }
 
 html {
@@ -138,15 +138,17 @@ html {
 }
 
 .titulo {
-    font-size: 36px;
+    font-size: 52px;
     margin: 0px;
     color: #000000;
+    text-align: justify;
 }
 
 .subtitulo {
-    font-size: 20px;
+    font-size: 28px;
     margin: 5px 0 0;
     color: #000000;
+    text-align: justify;
 }
 
 .explore {
@@ -210,7 +212,7 @@ html {
 .container-cards {
     background-color: #99715a;
     border-radius: 20px;
-    height: 700px;
+    height: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,7 +224,6 @@ html {
 
 .carousel-item {
     transition: transform 1.5s ease, opacity 2s ease;
-    /* Ajuste o tempo e o tipo de transição */
 }
 
 .container-titulo-carrosel {
@@ -254,7 +255,7 @@ html {
 
 .card {
     width: auto;
-    height: 660px;
+    height: 600px;
     background-color: #f2f2f2;
 }
 
@@ -387,3 +388,109 @@ html {
     color: #fff;
     margin-right: 15px;
 }
+
+/* Formulario */
+.container-form {
+    width: 800px !important;
+    background-color: #F2B705;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+    
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título */
+.titulo-form h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.form-label {
+    color: #000000;
+}
+
+/* Campos de entrada */
+.form-control, .form-select {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Campos ao receber foco */
+.form-control:focus, .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* Botão */
+
+a.btn.btn-primary {
+    background-color: #04BF9D;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    text-decoration: none; 
+    transition: all 0.3s ease;
+}
+
+/* Hover para o botão */
+a.btn.btn-primary:hover {
+    background-color: #e5ffdf;
+    color: black;
+    font-weight: 900;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-form {
+        padding: 15px;
+    }
+
+    .titulo-form h1 {
+        font-size: 20px;
+    }
+
+    /* Faz o botão 'a' ocupar 100% da largura em telas pequenas */
+    a.btn.btn-primary {
+        width: 100%;
+    }
+}
+
+
+/* Estilo do contêiner externo */
+.container-externa {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;    /* Centraliza verticalmente */          /* Ocupa a altura total da tela */
+    background-color: transparent; /* Opcional: fundo do contêiner */
+    margin: 0;              /* Remove margens externas */
+    padding: 0;             /* Remove espaçamento interno */
+}
+
+/* End Code Formulario */
