@@ -19,7 +19,7 @@
     <link rel="shortcut icon" href="../assets/favicon/" type="image/x-icon">
 
     <!-- Animate -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <title>Turismo Acessível</title>
 
@@ -74,13 +74,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h1 class="titulo-explore"><strong>EXPLORE LOCAIS ADAPTADOS</strong> DE ACORDO COM AS OPÇÕES
-                            ABAIXO:</h1>
+                        <h1 class="titulo-explore"><strong>EXPLORE LOCAIS ADAPTADOS</strong> DE ACORDO COM AS
+                            OPÇÕES ABAIXO:</h1>
                     </div>
                 </div>
                 <div class="row row-cols-2">
                     <div class="col">
-                        <label class="subtitulo-exp">PESQUISE PELA CIDADE</label>
+                        <label class="subtitulo-exp ">PESQUISE PELA CIDADE</label>
                     </div>
                     <div class="col">
                         <label class="subtitulo-exp">TIPO DE ESTABELECIMENTO OU ATRAÇÃO</label>
@@ -91,7 +91,7 @@
                                 aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col estabelecimento">
                         <div class="input-group mb-3">
                             <select class="form-select" id="input-exp">
                                 <option selected>Qual o Estabeleciomento?</option>
@@ -318,13 +318,14 @@
         <!-- End Card Slide -->
 
         <!-- Menu -->
-        <div class="grid container-menu" id="menu-page" style="width: 50%; height: 190px; margin: 20px auto; border-radius: 8px;">
+        <div class="grid container-menu" id="menu-page"
+            style="width: 50%; height: 190px; margin: 20px auto; border-radius: 8px;">
             <div class="titulo-menu">
                 <h1>Menu</h1>
             </div>
             <div class="conteudo-menu">
                 <div class="g-col-6 menu-item">
-                    <a href="#" class="menu-link">
+                    <a href="../src/progTur.html" class="menu-link">
                         <i class="bi bi-caret-right-fill"></i>
                         Saiba mais sobre o programa Turismo Acessível
                     </a>
@@ -336,7 +337,7 @@
                     </a>
                 </div>
                 <div class="g-col-6 menu-item">
-                    <a href="#" class="menu-link">
+                    <a href="../src/contact.html" class="menu-link">
                         <i class="bi bi-caret-right-fill"></i>
                         Fale conosco
                     </a>
@@ -346,7 +347,7 @@
         <!-- End Menu -->
     </main>
     <!-- End -->
-    
+
     <!-- Rodapé  -->
     <footer class="container-rodape">
         <div class="rodape">
@@ -358,12 +359,11 @@
                 <a href="../src/contact.html">Contato</a>
             </div>
             <div class="social-footer">
-                <a href=""><i class="bi bi-github"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/jsmatosdev"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/devjosuematos/"><i class="bi bi-linkedin"></i></a>
             </div>
         </div>
     </footer>
-    
     <!-- end Rodapé  -->
 
     <!-- Script bootstrap -->
@@ -371,8 +371,40 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Função para manipular tamanho de fonte
+            function changeFontSize(action) {
+                // Seleciona todos os elementos com as classes especificadas
+                const elements = document.querySelectorAll('.titulo, .subtitulo, .explore, .titulo-explore, .subtitulo-exp, input, .form-select, .label, .conteudo-filtro, .btn-pesquisa, .titulo-destaque, .titulo-menu');
+
+                if (elements.length === 0) {
+                    console.warn("Nenhum elemento encontrado com as classes especificadas.");
+                    return;
+                }
+
+                elements.forEach((element) => {
+                    let currentSize = parseFloat(window.getComputedStyle(element).fontSize);
+                    if (action === 'increase') {
+                        element.style.fontSize = (currentSize + 2) + 'px';
+                    } else if (action === 'decrease') {
+                        if (currentSize > 12) { // Evita fontes menores que 12px
+                            element.style.fontSize = (currentSize - 2) + 'px';
+                        } else {
+                            console.warn("O tamanho mínimo de fonte já foi alcançado.");
+                        }
+                    }
+                });
+            }
+
+            // Expondo a função globalmente para os botões
+            window.changeFontSize = changeFontSize;
+        });
+
+    </script>
+
     <!-- Import Js -->
-     <script src="./script/apiCity.js"></script>
+    <script src="./script/apiCity.js"></script>
     <script src="./script/script.js"></script>
 
 

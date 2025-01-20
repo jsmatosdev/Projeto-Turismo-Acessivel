@@ -17,22 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Função para manipular tamanho de fonte //
-function changeFontSize(action) {
-    // Alvo de alteração: títulos e inputs
-    const elements = document.querySelectorAll('.titulo, .subtitulo, input, .titulo-explore, .subtitulo-explore, .input-group, .form-select, .subtitulo-exp, .conteudo-filtro');
-    elements.forEach((element) => {
-        let currentSize = parseFloat(window.getComputedStyle(element).fontSize);
-        if (action === 'increase') {
-            element.style.fontSize = (currentSize + 2) + 'px';
-        } else if (action === 'decrease') {
-            if (currentSize > 12) { // Evita fontes menores que 12px
-                element.style.fontSize = (currentSize - 2) + 'px';
-            }
-        }
-    });
-}
-
 
 // Seleciona o carrossel
 const carousel = document.querySelector('#cardCarousel');

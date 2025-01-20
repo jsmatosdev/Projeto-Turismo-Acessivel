@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Cascading Style Sheets -->
+    <link rel="stylesheet" href="./style/styles.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/favicon/" type="image/x-icon">
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <title>Sobre o Turismo Acessível</title>
+
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="navbar navbar-expand navbar-light naveg" id="start-page">
+        <div class="container d-flex justify-content-center">
+            <div class="nav navbar-nav">
+                <a class="nav-item nav-link text-light" href="#conteudo-tur">Ir para o conteúdo</a>
+                <a class="nav-item nav-link text-light" href="#menu-page">Ir para o menu</a>
+                <a class="nav-item nav-link text-light" href="#">Acessibilidade</a>
+            </div>
+            <!-- Botões de controle de tamanho da fonte -->
+            <div class="button-group">
+                <button onclick="changeFontSize('increase')">+</button>
+                <a>A</a>
+                <button onclick="changeFontSize('decrease')">-</button>
+            </div>
+        </div>
+        <div class="dropdown" id="customDropdown">
+            <button class="dropdown-button"><img width="30" height="30"
+                    src="https://img.icons8.com/emoji/48/brazil-emoji.png" alt="brazil-emoji" /></button>
+            <div class="dropdown-menu">
+                <a href="#"><img width="30" height="30" src="https://img.icons8.com/emoji/48/united-states-emoji.png"
+                        alt="united-states-emoji" /></a>
+                <a href="#"><img width="30" height="30" src="https://img.icons8.com/emoji/48/ceuta--melilla-emoji.png"
+                        alt="ceuta--melilla-emoji" /></a>
+            </div>
+        </div>
+    </nav>
+    <!-- End Code Nav -->
+
+    <!-- Main -->
+    <main class="container">
+        <!-- Logo text -->
+        <div class="logo-container">
+            <a href="../src/index.html"><img src="../assets/img/Logo_Turismo.png" class="logo" alt="Logo"></a>
+            <div class="text-container">
+                <h1 class="titulo">Turismo Acessível</h1>
+                <h4 class="subtitulo">Turismo Acessível - É um conjunto de ações para promover a inclusão e o acesso
+                    de
+                    pessoas com deficiência ou com mobilidade reduzida à atividade turística com segurança e
+                    autonomia.
+                </h4>
+            </div>
+        </div>
+        <!-- End Code Text -->
+
+        <!-- Sobre o Programa -->
+        <div class="container-sobre" id="conteudo-tur">
+            <div class="header-sobre">
+                <h1 class="titulo-sobre">Sobre o Programa Turismo Acessível</h1>
+            </div>
+            <div class="container-conteudo-tur">
+                <div class="conteudo-texto">
+                    <p class="text-sobre">
+                        O Programa Turismo Acessível se constitui em um conjunto de ações para promover a inclusão
+                        social e
+                        o
+                        acesso de pessoas com deficiência ou com mobilidade reduzida à atividade turística, de modo a
+                        permitir o alcance e a utilização de serviços, edificações e equipamentos turísticos com
+                        segurança e
+                        autonomia.
+                    </p>
+
+                    <p class="text-sobre">
+                        Ao propiciar a inclusão de pessoas com deficiência ou mobilidade reduzida, o Programa vai ao
+                        encontro de
+                        ações e inciativas do Governo federal que buscam defender e garantir condições de vida com
+                        dignidade, a
+                        plena participação e inclusão na sociedade, e a igualdade de oportunidades a todas as pessoas
+                        com
+                        deficiência também na atividade turística.
+                    </p>
+
+                    <p class="text-sobre">
+                        Nesse sentido, o Programa é direcionado a gestores públicos e privados, profissionais da linha
+                        de
+                        frente
+                        do turismo, empreendimentos turísticos, destinos turísticos e pessoas com deficiência ou com
+                        mobilidade
+                        reduzida (turista e não turistas).
+                    </p>
+                </div>
+                <div class="links-sobre-prog">
+                    <h4 class="titulo-links"><strong>Conheça mais sobre o Programa, acesse:</strong></h4>
+                    <a href="https://turismoacessivel.gov.br/ta/downloads/sobre/Cartilha_Versao_Final.pdf"
+                        class="links-sobre">
+                        Cartilha Programa Turismo Acessível (formato .pdf, tamanho 1,9 MB)
+                    </a>
+                    <a href="../assets/text/Cartilha_Versao_Final _.odt" class="links-sobre">
+                        Cartilha Programa Turismo Acessível (formato .docx, tamanho 1,9 MB)
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End code Prog Turismo Acessível -->
+
+        <!-- Menu -->
+        <div class="grid container-menu" id="menu-page"
+            style="width: 50%; height: 190px; margin: 40px auto; border-radius: 8px;">
+            <div class="titulo-menu">
+                <h1>Menu</h1>
+            </div>
+            <div class="conteudo-menu">
+                <div class="g-col-6 menu-item">
+                    <a href="../src/progTur.html" class="menu-link">
+                        <i class="bi bi-caret-right-fill"></i>
+                        Saiba mais sobre o programa Turismo Acessível
+                    </a>
+                </div>
+                <div class="g-col-6 menu-item">
+                    <a href="#" class="menu-link">
+                        <i class="bi bi-caret-right-fill"></i>
+                        Conheça os direitos da Pessoa com Deficiência
+                    </a>
+                </div>
+                <div class="g-col-6 menu-item">
+                    <a href="../src/contact.html" class="menu-link">
+                        <i class="bi bi-caret-right-fill"></i>
+                        Fale conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End Menu -->
+
+    </main>
+
+    <!-- Rodapé  -->
+    <footer class="container-rodape">
+        <div class="rodape">
+            <div class="logo-footer">
+                <a href="#start-page"><img src="../assets/img/Logo_Turismo.png" alt="Logo do Turismo"></a>
+            </div>
+            <div class="conteudo-footer">
+                <a href="#">Sobre</a>
+                <a href="../src/contact.html">Contato</a>
+            </div>
+            <div class="social-footer">
+                <a href=""><i class="bi bi-github"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- end Rodapé  -->
+
+    <!-- Script bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+    <!-- Import Js -->
+    <script src="./script/script.js"></script>
+
+
+</body>
+
+</html>
