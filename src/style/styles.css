@@ -11,6 +11,11 @@ body {
     font-family: 'POPPINS';
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 10px;
+}
+
 /* Nav */
 .naveg {
     height: 80px;
@@ -118,6 +123,15 @@ body {
     height: 240px;
 }
 
+.logo {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+
 .text-container {
     display: flex;
     flex-direction: column;
@@ -190,4 +204,186 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Carrosel */
+.container-cards {
+    background-color: #99715a;
+    border-radius: 20px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cardCarousel {
+    user-select: none;
+}
+
+.carousel-item {
+    transition: transform 1.5s ease, opacity 2s ease;
+    /* Ajuste o tempo e o tipo de transição */
+}
+
+.container-titulo-carrosel {
+    background: #f2f2f2;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.titulo-destaque {
+    font-size: 36px;
+    color: #000000;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    height: 240px;
+    width: 200px;
+    background-color: none;
+    opacity: 0%;
+}
+
+.card-img-top {
+    width: auto;
+    height: 240px;
+}
+
+.card-text {
+    text-align: justify;
+}
+
+.card {
+    width: auto;
+    height: 660px;
+    background-color: #f2f2f2;
+}
+
+#btn-destaques {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #02ffd1;
+    color: #000;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 0 15px 0 15px;
+    border: none;
+    width: 200px;
+    height: auto;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+#btn-destaques:hover {
+    background: #06a084;
+    color: #f2f2f2;
+}
+
+/* Menu */
+.container-menu {
+    --bs-gap: 0.25rem 1rem;
+    background-color: #2C2C2C;
+    width: 50%;
+    height: 190px;
+    margin: 20px auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.titulo-menu {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.titulo-menu h1 {
+    margin: 5px;
+    font-size: 1.5rem;
+}
+
+.conteudo-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item,
+.menu-link {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    text-decoration: none !important;
+}
+
+.menu-item i {
+    font-size: 1.2rem;
+}
+
+.menu-link:hover {
+    color: #f0a500;
+    /* Cor ao passar o mouse */
+}
+
+/* Estilo geral do rodapé */
+.container-rodape {
+    width: 100%;
+    height: 150px;
+    background-color: #F2B705;
+    padding: 20px 0;
+}
+
+/* Estilo para alinhar os itens no rodapé */
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Estilo para a logo */
+.logo-footer img {
+    max-width: 120px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-footer:hover img {
+    transform: scale(1.1);
+}
+
+/* Estilo para os links */
+.conteudo-footer,
+.social-footer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.conteudo-footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 32px;
+}
+
+.conteudo-footer a:hover {
+    text-decoration: underline;
+}
+
+.social-footer a:hover {
+    text-decoration: underline;
+}
+
+.social-footer a {
+    font-size: 50px !important;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 15px;
 }

@@ -18,17 +18,21 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="../assets/favicon/" type="image/x-icon">
 
+    <!-- Animate -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <title>Turismo Acessível</title>
+
 </head>
 
 <body>
     <!-- Nav -->
-    <nav class="navbar navbar-expand navbar-light naveg">
+    <nav class="navbar navbar-expand navbar-light naveg" id="start-page">
         <div class="container d-flex justify-content-center">
             <div class="nav navbar-nav">
-                <a class="nav-item nav-link text-light" href="#">Ir para o conteúdo</a>
-                <a class="nav-item nav-link text-light" href="#">Ir para o menu</a>
-                <a class="nav-item nav-link text-light" href="#">Contraste</a>
+                <a class="nav-item nav-link text-light" href="#explore-conteudo">Ir para o conteúdo</a>
+                <a class="nav-item nav-link text-light" href="#menu-page">Ir para o menu</a>
+                <a class="nav-item nav-link text-light" href="#destaques-page">Destaques</a>
                 <a class="nav-item nav-link text-light" href="#">Acessibilidade</a>
             </div>
             <!-- Botões de controle de tamanho da fonte -->
@@ -49,11 +53,13 @@
             </div>
         </div>
     </nav>
+    <!-- End Code Nav -->
 
     <!-- Main -->
     <main class="container">
+        <!-- Logo text -->
         <div class="logo-container">
-            <img src="../assets/img/Logo_Turismo.png" class="logo" alt="Logo">
+            <a href="../src/index.html"><img src="../assets/img/Logo_Turismo.png" class="logo" alt="Logo"></a>
             <div class="text-container">
                 <h1 class="titulo">Turismo Acessível</h1>
                 <h4 class="subtitulo">Turismo Acessível - É um conjunto de ações para promover a inclusão e o acesso de
@@ -61,9 +67,10 @@
                 </h4>
             </div>
         </div>
+        <!-- End Code Text -->
 
         <!-- Inicio da Area para filtrar Local -->
-        <div class="explore">
+        <div class="explore" id="explore-conteudo">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -89,7 +96,7 @@
                             <select class="form-select" id="input-exp">
                                 <option selected>Qual o Estabeleciomento?</option>
                                 <option value="1">Teatro</option>
-                                <option value="2">Museo</option>
+                                <option value="2">Museu</option>
                                 <option value="3">Restaurante</option>
                             </select>
                         </div>
@@ -110,37 +117,254 @@
                     </div>
                     <div class="container">
                         <div class="row text-center">
-                          <div class="col d-flex flex-column align-items-center">
-                            <div class="eclipse"><img src="../assets/img/VisãoDeft.png" style="width: 60px;" alt="img_"></div>
-                            <div class="conteudo-filtro">Visual</div>
-                          </div>
-                          <div class="col d-flex flex-column align-items-center">
-                            <div class="eclipse"><img src="../assets/img/surdezDeft.png" style="width: 60px;" alt="img_"></div>
-                            <div class="conteudo-filtro">Auditiva</div>
-                          </div>
-                          <div class="col d-flex flex-column align-items-center">
-                            <div class="eclipse"><img src="../assets/img/CadeiranteDeft.png" style="width: 60px;" alt="img_"></div>
-                            <div class="conteudo-filtro">Físico ou Motora</div>
-                          </div>
-                          <div class="col d-flex flex-column align-items-center">
-                            <div class="eclipse"><img src="../assets/img/MobilidadeDeft.png" style="width: 60px;" alt="img_"></div>
-                            <div class="conteudo-filtro">Mobilidade Reduzida</div>
-                          </div>
-                        </div>
-                      </div>
-                        <div class="container text-center">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="d-grid col-2 mx-auto">
-                                        <button class="btn btn-primary btn-pesquisa" type="submit">PESQUISAR</button>
-                                    </div>
-                                </div>
-
+                            <div class="col d-flex flex-column align-items-center">
+                                <div class="eclipse"><img src="../assets/img/filtros/VisãoDeft.png" style="width: 60px;"
+                                        alt="img_"></div>
+                                <div class="conteudo-filtro">Visual</div>
+                            </div>
+                            <div class="col d-flex flex-column align-items-center">
+                                <div class="eclipse"><img src="../assets/img/filtros/surdezDeft.png"
+                                        style="width: 60px;" alt="img_"></div>
+                                <div class="conteudo-filtro">Auditiva</div>
+                            </div>
+                            <div class="col d-flex flex-column align-items-center">
+                                <div class="eclipse"><img src="../assets/img/filtros/CadeiranteDeft.png"
+                                        style="width: 60px;" alt="img_"></div>
+                                <div class="conteudo-filtro">Físico ou Motora</div>
+                            </div>
+                            <div class="col d-flex flex-column align-items-center">
+                                <div class="eclipse"><img src="../assets/img/filtros/MobilidadeDeft.png"
+                                        style="width: 60px;" alt="img_"></div>
+                                <div class="conteudo-filtro">Mobilidade Reduzida</div>
                             </div>
                         </div>
                     </div>
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-grid col-2 mx-auto">
+                                    <button class="btn btn-primary btn-pesquisa" type="submit">PESQUISAR</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  End Code Filter -->
+
+        <!-- Corrosel  -->
+        <div class="container-titulo-carrosel mt-4" id="destaques-page">
+            <div class="row">
+                <h1 class="titulo-destaque text-center">Destaques</h1>
+            </div>
+        </div>
+
+        <!-- Slide Card -->
+        <div class="container container-cards mt-4 mb-4">
+            <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true"
+                style="cursor: grab;">
+
+                <!-- Indicadores
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active"  aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div> -->
+
+                <!-- Conteúdo do carrossel -->
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col">
+                                <div class="card ">
+                                    <img src="../assets/img/locais/Teatro-da-Instalacao.jpg" class="card-img-top"
+                                        alt="card-01">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Teatro da Instalação</h5>
+                                        <p class="card-text">O Teatro da Instalação é todo sinalizado em Braille e
+                                            possui cabine de audiodescrição. O local tem capacidade para 214 lugares,
+                                            recebendo espetáculos culturais de dança, teatro, shows e concertos. O
+                                            Teatro fica localizado na Rua Frei José dos Inocentes, bairro Centro,
+                                            Manaus. É utilizado para ocupação artística de quarta-feira a domingo, das
+                                            16h às 21h.</p>
+                                        <a href="https://cultura.am.gov.br/espacos-culturais/teatros/teatro-da-instalacao/"
+                                            class="mt-auto" id="btn-destaques">Saiba Mais</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card ">
+                                    <img src="../assets/img/locais/palacio-rio-negro.jpg" class="card-img-top"
+                                        alt="card-02">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Palacio Rio Negro</h5>
+                                        <p class="card-text">O Centro Cultural Palácio Rio Negro (CCPRN) foi construído
+                                            em 1903, no estilo eclético para ser residência particular de um abastado
+                                            comerciante da borracha, o alemão Karl Waldemar Scholz. É um dos prédios
+                                            mais emblemáticos desse período, que marcou a economia do Estado.</p>
+                                        <a href="https://cultura.am.gov.br/espacos-culturais/centros-culturais/centro-cultural-palacio-rio-negro/"
+                                            class="mt-auto" id="btn-destaques">Saiba Mais</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated 5 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card ">
+                                    <img src="../assets/img/locais/Palecete-Provincial.jpg" class="card-img-top"
+                                        alt="card-03">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Palacete Providencial</h5>
+                                        <p class="card-text">O Palacete Provincial abriga quatro museus de diferentes
+                                            linguagens: Museu da Imagem e do Som do Amazonas (Misam), Museu de
+                                            Numismática Bernardo Ramos (MNBR), Museu Tiradentes da Polícia Militar
+                                            (MTPM) e Pinacoteca do Amazonas (PINAM).</p>
+                                        <a href="https://cultura.am.gov.br/espacos-culturais/museus/palacete-provincial/"
+                                            class="mt-auto" id="btn-destaques">Saiba Mais</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated 7 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col">
+                                <div class="card ">
+                                    <img src="../assets/img/locais/Teatro-Amazonas.jpg" class="card-img-top"
+                                        alt="card-04">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Teatro Amazonas</h5>
+                                        <p class="card-text">Principal símbolo cultural e arquitetônico do Estado, o
+                                            Teatro Amazonas, localizado no Largo de São Sebastião, no Centro de Manaus,
+                                            mantém viva boa parte da história do ciclo da borracha, época áurea da
+                                            capital amazonense. Inaugurado no dia 31 de dezembro de 1896, o Teatro
+                                            surpreende e encanta pela imponência.</p>
+                                        <a href="https://cultura.am.gov.br/espacos-culturais/museus/palacete-provincial/"
+                                            class="mt-auto" id="btn-destaques">Saiba Mais</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated 10 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card ">
+                                    <img src="../assets/img/locais/Centro-de-artes-usinas.jpg" class="card-img-top"
+                                        alt="card-05">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Centro Cultural Usina Chaminé</h5>
+                                        <p class="card-text">O prédio do Centro Cultural Usina Chaminé foi construído em
+                                            1910, pela empresa inglesa Manaós Improvements, concessionária de serviços
+                                            de saneamento, com a finalidade de ser uma usina de tratamento de esgotos da
+                                            cidade. Em 1988, a edificação foi tombada como monumento histórico do
+                                            Amazonas e, em 1993, reformada, passando a funcionar como Centro de Artes
+                                            Chaminé, abrigando ainda a Pinacoteca do Estado. </p>
+                                        <a href="https://cultura.am.gov.br/espacos-culturais/centros-culturais/centro-cultural-usina-chamine/"
+                                            class="mt-auto" id="btn-destaques">Saiba Mais</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated 10 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card ">
+                                    <img src="../assets/img/locais/Sitio-Mundo-Azul.jpg" class="card-img-top"
+                                        alt="card-06">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Sítio Mundo Azul</h5>
+                                        <p class="card-text">O Sítio Mundo Azul foi aberto oficialmente para visitação,
+                                            em novembro de 2019, quando o casal realizou um evento social e levou vários
+                                            profissionais, que atuam com autistas, para falar sobre o assunto. A
+                                            prefeitura de Manacapuru, parceira do evento, enviou algumas famílias do
+                                            município, com filhos autistas, para o acontecimento e, em janeiro do ano
+                                            passado, Jane e Érico passaram a divulgar o espaço e receber mais e mais
+                                            famílias.</p>
+                                        <a href="https://jcam.com.br/noticias/sitio-mundo-azul-recebe-criancas-autistas-e-pcds/"
+                                            class="mt-auto" id="btn-destaques">Saiba Mais</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated 10 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles do carrossel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- End Card Slide -->
+
+        <!-- Menu -->
+        <div class="grid container-menu" id="menu-page" style="width: 50%; height: 190px; margin: 20px auto; border-radius: 8px;">
+            <div class="titulo-menu">
+                <h1>Menu</h1>
+            </div>
+            <div class="conteudo-menu">
+                <div class="g-col-6 menu-item">
+                    <a href="#" class="menu-link">
+                        <i class="bi bi-caret-right-fill"></i>
+                        Saiba mais sobre o programa Turismo Acessível
+                    </a>
+                </div>
+                <div class="g-col-6 menu-item">
+                    <a href="#" class="menu-link">
+                        <i class="bi bi-caret-right-fill"></i>
+                        Conheça os direitos da Pessoa com Deficiência
+                    </a>
+                </div>
+                <div class="g-col-6 menu-item">
+                    <a href="#" class="menu-link">
+                        <i class="bi bi-caret-right-fill"></i>
+                        Fale conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End Menu -->
     </main>
     <!-- End -->
+    
+    <!-- Rodapé  -->
+    <footer class="container-rodape">
+        <div class="rodape">
+            <div class="logo-footer">
+                <a href="#start-page"><img src="../assets/img/Logo_Turismo.png" alt="Logo do Turismo"></a>
+            </div>
+            <div class="conteudo-footer">
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+            </div>
+            <div class="social-footer">
+                <a href=""><i class="bi bi-github"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- end Rodapé  -->
 
     <!-- Script bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -149,6 +373,7 @@
 
     <!-- Import Js -->
     <script src="./script/script.js"></script>
+
 
 </body>
 
